@@ -1,4 +1,12 @@
 <h1>Car List</h1>
+
+@*This logic is same as that of the logic of giving an error message in HomeController.cs file.
+if we want to add different error messages then doing it in a function in controller is a better option
+otherwise we acn do like this:
+@if(Model.Count == 0)
+{
+  <p> We are sorry, but we’re out of stock! </p>
+} *@
 <ul>
   @foreach(var car in Model)
   {

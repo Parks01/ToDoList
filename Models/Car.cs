@@ -9,9 +9,7 @@ namespace CarDealership.Models
     private int _price;
     private int _mileage;
     private static List<Car> _carList = new List<Car>();
-
     public Car(string brand, string model, int price, int mileage)
-
     {
       _brand = brand;
       _model = model;
@@ -45,6 +43,11 @@ namespace CarDealership.Models
     public static void ClearAll()
     {
       _carList.Clear();
+    }
+    public static string GetCount()
+    {
+      string str = "Sorry we are out of cars. Please add some more cars";
+      return str;
     }
   }
 }

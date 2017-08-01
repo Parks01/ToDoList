@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using CarDealership.Models;
@@ -16,8 +17,17 @@ namespace CarDealership.Controllers
         public ActionResult CarList()
         {
           List<Car> allCars = Car.GetAll();
-          return View(allCars);
+          if(allCars.Count == 0 )
+          {
+            string message = Car.GetCount();
+            return View("Error", message);
+          }
+          else
+          {
+            return View(allCars);
+          }
         }
+
 
         [HttpPost("/car/create")]
         public ActionResult CreateCar()
