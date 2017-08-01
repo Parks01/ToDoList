@@ -1,16 +1,17 @@
 using System;
 using System.Collections.Generic;
-namespace ToDoList.Models
+namespace CarDealership.Models
 {
-  public class CarDealership
+  public class Car
   {
     private string _brand;
     private string _model;
     private int _price;
     private int _mileage;
-    private static List<Car> carList = new List<Car>();
+    private static List<Car> _carList = new List<Car>();
 
     public Car(string brand, string model, int price, int mileage)
+
     {
       _brand = brand;
       _model = model;
@@ -25,11 +26,11 @@ namespace ToDoList.Models
     {
       return _model;
     }
-    public string GetPrice()
+    public int GetPrice()
     {
       return _price;
     }
-    public string GetMileage()
+    public int GetMileage()
     {
       return _mileage;
     }

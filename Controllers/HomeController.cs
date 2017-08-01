@@ -15,7 +15,7 @@ namespace CarDealership.Controllers
         [HttpGet("/car/list")]
         public ActionResult CarList()
         {
-          List<string> allCars = Car.GetAll();
+          List<Car> allCars = Car.GetAll();
           return View(allCars);
         }
 
