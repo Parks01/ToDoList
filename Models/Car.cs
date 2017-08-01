@@ -17,17 +17,33 @@ namespace ToDoList.Models
       _price = price;
       _mileage = mileage;
     }
+    public string GetBrand()
+    {
+      return _brand;
+    }
+    public string GetModel()
+    {
+      return _model;
+    }
+    public string GetPrice()
+    {
+      return _price;
+    }
+    public string GetMileage()
+    {
+      return _mileage;
+    }
     public static List<Car> GetAll()
     {
-      return carList;
+      return _carList;
     }
     public void Save()
     {
-      carList.Add(this);
+      _carList.Add(this);
     }
     public static void ClearAll()
     {
-      carList.Clear();
+      _carList.Clear();
     }
   }
 }

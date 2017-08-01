@@ -22,7 +22,7 @@ namespace CarDealership.Controllers
         [HttpPost("/car/create")]
         public ActionResult CreateCar()
         {
-          Car newCar = new Car(Request.Form["new-car"]);
+          Car newCar = new Car(Request.Form["car-brand"], Request.Form["car-model"], int.Parse(Request.Form["car-price"]), int.Parse(Request.Form["car-mileage"]));
           newCar.Save();
           return View(newCar);
         }
